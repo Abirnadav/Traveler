@@ -23,3 +23,13 @@ function initMap() {
 
 
 }
+
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition();
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
