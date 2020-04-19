@@ -5,8 +5,18 @@ var gLocations = [];
 var gUserLocation
 
 
+function test() {
+    createLocation('tel aviv', 34.855499, 32.109333)
+}
+
+function getLocations() {
+    return gLocations;
+}
+
+
 function createLocation(name, lng, lat) {
     gLocations.push({
+        id: makeId(),
         name: name,
         lng: lng,
         lat: lat

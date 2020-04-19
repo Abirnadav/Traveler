@@ -1,4 +1,5 @@
 'use strict'
+import {Location} from './location-preview.js';
 
 // Initialize and add the map
 function onClick(data) {
@@ -48,4 +49,22 @@ function geocodeAddress(geocoder, resultsMap) {
 function onSearchInput(value) {
     document.querySelector('.status').innerHTML = `Looking For ${value}...<br/> Please Wait!`
 
+}
+
+test();
+renderLocations()
+function renderLocations(locations) {
+    var locations =  getLocations();
+    var strHTMLs = locations.map(getLocationHtml);
+    var elTableContainer = document.querySelector('tbody');
+    elTableContainer.innerHTML = strHTMLs.join('');
+}
+function getLocationHtml(location) {
+    console.log(location);
+    
+    var rowHTML = new Location(location.id, location.name);
+    console.log(rowHTML);
+    
+   var html = rowHTML.render();
+    return html;
 }
