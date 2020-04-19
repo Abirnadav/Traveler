@@ -67,11 +67,12 @@ function showPosition(position) {
 function getLocationIdx(id) {
     console.log(id);
 
+
     // const index = gLocations.indexOf(userLocation => {
     //     console.log('loc id ', userLocation.id)
     //     userLocation.id === id
     // }
-    const index = gLocations.indexOf(userLocation =>  userLocation.id === id)
+    const index = gLocations.indexOf(userLocation => userLocation.id === id)
     // const index = gLocations.filter(location => {
     //     location.id.indexOf(locationId => locationId === id)
     // });
