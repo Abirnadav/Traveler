@@ -1,5 +1,4 @@
-import { Location } from './location-preview.js';
-
+import { Location } from './location-preview.js'
 test();
 
 
@@ -9,7 +8,7 @@ function renderLocations(locations) {
     var locations = getLocations();
     var strHTMLs = locations.map(getLocationHtml);
     var elTableContainer = document.querySelector('tbody');
-    elTableContainer.innerHTML = strHTMLs.join('');
+    elTableContainer.innerHTML += strHTMLs.join('');
 }
 
 function getLocationHtml(location) {

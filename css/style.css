@@ -142,3 +142,11 @@ button:hover {
 .dropdown:hover .dropbtn {
     background-color: #70a1ff;
 }
+
+.weather-container {
+    position: absolute;
+    top: 15vh;
+    left: 2vw;
+    width: 20vw;
+    border: 1px solid black;
+}

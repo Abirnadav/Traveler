@@ -1,8 +1,19 @@
-'use strict'
+var service = {
+    deleteLocation,
+    test,
+    getLocations,
+    createUserLocation,
+    getLocation,
+    showPosition,
+    getLocationIdx,
+
+}
+
 var gCurrLng = 34.7671218
 var gCurrLat = 32.080525
 var gLocations = [];
 var gUserLocation;
+
 
 
 function test() {
@@ -59,27 +70,33 @@ function showPosition(position) {
     });
     marker.setMap(map);
     // Zoom to 9 when clicking on marker
-    google.maps.event.addListener(marker, 'click', function () {
+    google.maps.event.addListener(marker, 'click', function() {
         map.setZoom(9);
         map.setCenter(marker.getPosition());
     });
 }
+
 function getLocationIdx(id) {
     console.log(id);
+    var currIdx = 0
+    var idx
+    gLocations.forEach(userLocation => {
+        console.log(currIdx, 'idx', idx)
+        if (userLocation.id === id) {
+            console.log(currIdx, 'idx correct', idx)
+            idx = currIdx
+        }
+        currIdx++
+    })
 
-
-    // const index = gLocations.indexOf(userLocation => {
-    //     console.log('loc id ', userLocation.id)
-    //     userLocation.id === id
-    // }
-    const index = gLocations.indexOf(userLocation => userLocation.id === id)
-    // const index = gLocations.filter(location => {
-    //     location.id.indexOf(locationId => locationId === id)
-    // });
-    console.log(index);
-    
-    return index;
+    console.log('MY ID IS : ', idx);
+    return idx;
 }
+
+
 function deleteLocation(idx) {
+    console.log(' Im detleting ', idx);
     gLocations.splice(idx, 1)
+
+
 }
