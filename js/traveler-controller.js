@@ -15,20 +15,31 @@ function initMap() {
     var map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 4,
-            center: telaviv
+            center: telaviv,
+            mapTypeControl: true,
         });
-    // The marker, 
-    var marker = new google.maps.Marker({
-        position: telaviv,
-        map: map
+    var geocoder = new google.maps.Geocoder();
+    document.getElementById('search-btn').addEventListener('click', function() {
+        geocodeAddress(geocoder, map);
     });
 }
 
-function getLocation() {
-    if (navigator.geolocation) {
-        gLocation = navigator.geolocation.getCurrentPosition();
-    } else {
-        console.log('Not supported!')
-    }
+function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('location').value;
+    // if (address === '' || address === ' ') return;
+    geocoder.geocode({ 'address': address }, function(results, status) {
+        if (status === 'OK') {
+            document.querySelector('.status').innerText = `Showing Results For ${address}`
+
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: resultsMap,
+                position: results[0].geometry.location
+            });
+        } else {
+            document.querySelector('.status').innerText = 'Sure Its on Earth? Please Enter A correct Address!'
+
+        }
+    })
 
 }
