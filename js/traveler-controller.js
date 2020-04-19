@@ -2,9 +2,7 @@
 
 
 // Initialize and add the map
-function onClick(data) {
-    createLocation(name, lng, lat)
-}
+
 
 function initMap() {
     // Curr Location
@@ -15,12 +13,12 @@ function initMap() {
     // The map, centered at 
     var map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 4,
-            center: telaviv,
-            mapTypeControl: true,
-        });
+        zoom: 4,
+        center: telaviv,
+        mapTypeControl: true,
+    });
     var geocoder = new google.maps.Geocoder();
-    document.getElementById('search-btn').addEventListener('click', function() {
+    document.getElementById('search-btn').addEventListener('click', function () {
         geocodeAddress(geocoder, map);
     });
 }
@@ -28,7 +26,7 @@ function initMap() {
 function geocodeAddress(geocoder, resultsMap) {
     var address = document.getElementById('location').value;
     // if (address === '' || address === ' ') return;
-    geocoder.geocode({ 'address': address }, function(results, status) {
+    geocoder.geocode({ 'address': address }, function (results, status) {
         if (status === 'OK') {
             document.querySelector('.status').innerText = `Showing Results For ${address}`
 
@@ -46,6 +44,14 @@ function geocodeAddress(geocoder, resultsMap) {
 }
 
 
+function onClick(data) {
+    createLocation(name, lng, lat)
+}
+
+function onDelete(el) {
+console.log(el);
+
+}
 function onSearchInput(value) {
     document.querySelector('.status').innerHTML = `Looking For ${value}...<br/> Please Wait!`
 
