@@ -50,3 +50,14 @@ function onSearchInput(value) {
     document.querySelector('.status').innerHTML = `Looking For ${value}...<br/> Please Wait!`
 
 }
+getWeather()
+
+function getWeather() {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${gCurrLat}&lon=${gCurrLng}&APPID=0a9af044e53ea6925982142ac7e0e2db`)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+        });
+}
