@@ -76,7 +76,7 @@ main {
 }
 
 button {
-    background-color: #1e90ff;
+    background-color: #747d8c;
     border: none;
     border-radius: 5px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -85,8 +85,9 @@ button {
 }
 
 button:hover {
-    box-shadow: 0px 0px 26px 14px rgba(167, 167, 167, 0.64);
-    background-color: #70a1ff;
+    box-shadow: 0px 0px 26px 14px rgba(248, 244, 244, 0.64);
+    background-color: #747d8c;
     border: none;
     transform: scale(1.2);
+    border-radius: 5px;
 }
