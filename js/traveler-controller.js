@@ -24,28 +24,11 @@ function initMap() {
     });
 }
 
-
-
-
-var gLocation
-
 function getLocation() {
     if (navigator.geolocation) {
-        gLocation = navigator.geolocation.getCurrentPosition(moveTo);
+        gLocation = navigator.geolocation.getCurrentPosition();
     } else {
         console.log('Not supported!')
     }
-    return gLocation
-}
-
-
-
-
-function moveTo(postion) {
-
-
 
 }
-
-
-console.log('location ', gLocation)
