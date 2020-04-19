@@ -1,30 +1,25 @@
 'use strict'
 
+
+// Initialize and add the map
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: { lat: -gCurrLat, lng: gCurrLng },
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            position: google.maps.ControlPosition.TOP_CENTER
-        },
-        zoomControl: true,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.LEFT_CENTER
-        },
-        scaleControl: true,
-        streetViewControl: true,
-        streetViewControlOptions: {
-            position: google.maps.ControlPosition.LEFT_TOP
-        },
-        fullscreenControl: true
+    // Curr Location
+    var telaviv = {
+        lat: gCurrLat,
+        lng: gCurrLng
+    };
+    // The map, centered at 
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 4,
+            center: telaviv
+        });
+    // The marker, 
+    var marker = new google.maps.Marker({
+        position: telaviv,
+        map: map
     });
+
+
+
 }
-
-
-
-var gtelaviv = {
-    lat: gCurrLat,
-    lng: gCurrLng
-};
