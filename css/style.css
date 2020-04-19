@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 15px 5px #818181;
-    background-color: #f5f6fa;
+    background-color: #70a1ff;
     align-items: center;
     margin-bottom: 10vh;
 }
@@ -54,26 +54,32 @@ main {
 }
 
 .status {
-    height: 4vh;
-    width: 40vw;
+    /* width: 40vw; */
     text-align: center;
-    border: 1px solid black;
-    border-radius: 5px;
     color: rgba(0, 0, 0, .6);
-    text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+    text-shadow: 0px 3px 3px rgba(63, 61, 61, 0.726);
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 2px;
     word-spacing: 2px;
-    color: #000000;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
     text-transform: capitalize;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 .location-container {
     width: 30vw;
     margin-inline-end: 5vw;
+}
+
+button {
+    background-color: #70a1ff;
+    border: none;
+}
+
+button:hover {
+    background-color: #70a1ff;
+    border: none;
+    transform: scale(1.2);
 }

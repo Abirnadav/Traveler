@@ -31,7 +31,7 @@ function getLocation() {
         alert("Geolocation is not supported by this browser.");
     }
 }
-/// Gets a Postioen and focus on it!
+/// Gets a Postion and focus on it!
 function showPosition(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;

@@ -25,6 +25,10 @@ function initMap() {
 }
 
 function geocodeAddress(geocoder, resultsMap) {
+
+
+
+
     var address = document.getElementById('location').value;
     // if (address === '' || address === ' ') return;
     geocoder.geocode({ 'address': address }, function(results, status) {
@@ -41,5 +45,11 @@ function geocodeAddress(geocoder, resultsMap) {
 
         }
     })
+
+}
+
+
+function onSearchInput(value) {
+    document.querySelector('.status').innerHTML = `Looking For ${value}...<br/> Please Wait!`
 
 }
