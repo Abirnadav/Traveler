@@ -1,7 +1,10 @@
 'use strict'
 
-
 // Initialize and add the map
+function onClick(data) {
+    createLocation(name, lng, lat)
+}
+
 function initMap() {
     // Curr Location
     var telaviv = {
@@ -20,11 +23,7 @@ function initMap() {
         map: map
     });
 
-
-
 }
-
-
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -32,4 +31,9 @@ function getLocation() {
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+}
+
+var gtelaviv = {
+    lat: gCurrLat,
+    lng: gCurrLng
 }
