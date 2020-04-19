@@ -22,18 +22,30 @@ function initMap() {
         position: telaviv,
         map: map
     });
-
 }
+
+
+
+
+var gLocation
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition();
+        gLocation = navigator.geolocation.getCurrentPosition(moveTo);
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log('Not supported!')
     }
+    return gLocation
 }
 
-var gtelaviv = {
-    lat: gCurrLat,
-    lng: gCurrLng
+
+
+
+function moveTo(postion) {
+
+
+
 }
+
+
+console.log('location ', gLocation)
