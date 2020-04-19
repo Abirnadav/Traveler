@@ -7,7 +7,7 @@ export class Location {
         return `<tr> 
         <td> ${this.x} </td>
         <td> ${this.y} </td>
-        <td onclick="onDelete(this)"> Delete
+        <td onclick="onDelete(${this.x})"> Delete
         </td>
         </tr>`
     }

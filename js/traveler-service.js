@@ -7,6 +7,8 @@ var gUserLocation;
 
 function test() {
     createLocation('tel aviv', 34.855499, 32.109333)
+    createLocation('tel av3iv', 34.855499, 32.109333)
+    createLocation('tel av4iv', 34.855499, 32.109333)
 }
 
 function getLocations() {
@@ -57,8 +59,26 @@ function showPosition(position) {
     });
     marker.setMap(map);
     // Zoom to 9 when clicking on marker
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function () {
         map.setZoom(9);
         map.setCenter(marker.getPosition());
     });
+}
+function getLocationIdx(id) {
+    console.log(id);
+
+    // const index = gLocations.indexOf(userLocation => {
+    //     console.log('loc id ', userLocation.id)
+    //     userLocation.id === id
+    // }
+    const index = gLocations.indexOf(userLocation =>  userLocation.id === id)
+    // const index = gLocations.filter(location => {
+    //     location.id.indexOf(locationId => locationId === id)
+    // });
+    console.log(index);
+    
+    return index;
+}
+function deleteLocation(idx) {
+    gLocations.splice(idx, 1)
 }

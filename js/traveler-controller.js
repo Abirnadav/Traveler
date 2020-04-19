@@ -48,8 +48,9 @@ function onClick(data) {
     createLocation(name, lng, lat)
 }
 
-function onDelete(el) {
-console.log(el);
+function onDelete(id) {
+    var locationIndex = getLocationIdx(id);
+    deleteLocation(locationIndex);
 
 }
 function onSearchInput(value) {
