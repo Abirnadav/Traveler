@@ -1,9 +1,8 @@
 'use strict'
-<<<<<<< HEAD
 var gCurrLng
 var gCurrLat
 var gLocations;
-
+// start here
 
 function createLocation(name, lng, lat) {
     gLocations.push({
@@ -13,7 +12,6 @@ function createLocation(name, lng, lat) {
     })
 }
 
-=======
 var gCurrLng = 34.7671218
 var gCurrLat = 32.080525
 
@@ -24,4 +22,3 @@ function moveto(location) {
         map.setCenter(location)
     });
 }
->>>>>>> f5e83df84e7a33624d3f3f42840203bd65a75efa

@@ -1,10 +1,8 @@
 'use strict'
 
-<<<<<<< HEAD
 function onClick(data) {
     createLocation(name, lng, lat)
 }
-=======
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
@@ -33,4 +31,3 @@ var gtelaviv = {
     lat: gCurrLat,
     lng: gCurrLng
 };
->>>>>>> f5e83df84e7a33624d3f3f42840203bd65a75efa
