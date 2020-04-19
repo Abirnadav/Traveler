@@ -10,7 +10,7 @@ header {
     box-shadow: 0px 0px 15px 5px #818181;
     background-color: #70a1ff;
     align-items: center;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 header h1 {
@@ -39,6 +39,8 @@ main {
     height: 400px;
     width: 40vw;
     margin: 0 auto;
+    box-shadow: 0px 0px 26px 14px rgba(167, 167, 167, 0.64);
+    border: 6px outset rgba(0, 0, 0, 0.171);
 }
 
 .main-header {
@@ -74,11 +76,16 @@ main {
 }
 
 button {
-    background-color: #70a1ff;
+    background-color: #1e90ff;
     border: none;
+    border-radius: 5px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+    /* border: 6px outset rgba(0, 0, 0, 0.171); */
 }
 
 button:hover {
+    box-shadow: 0px 0px 26px 14px rgba(167, 167, 167, 0.64);
     background-color: #70a1ff;
     border: none;
     transform: scale(1.2);
